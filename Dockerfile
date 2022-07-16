@@ -1,8 +1,12 @@
 FROM php:7.4-fpm-alpine
 
-RUN apk add --no-cache nginx wget
+RUN apk add --no-cache nginx wget postgresql-dev
+
+RIN docker-php-ext-install pdo_pgsql pgsql
 
 RUN mkdir -p /run/nginx
+
+
 
 COPY docker/nginx.conf /etc/nginx/nginx.conf
 
