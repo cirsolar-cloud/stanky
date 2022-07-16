@@ -1,7 +1,5 @@
 FROM php:7.4-fpm-alpine
 
-FROM gcr.io/cloudsql-docker/gce-proxy:1.31.0
-
 RUN apk add --no-cache nginx wget
 
 RUN mkdir -p /run/nginx
@@ -16,5 +14,7 @@ RUN cd /app && \
     /usr/local/bin/composer install --no-dev
 
 RUN chown -R www-data: /app
+
+FROM gcr.io/cloudsql-docker/gce-proxy:1.31.0
 
 CMD sh /app/docker/startup.sh
