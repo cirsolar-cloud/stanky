@@ -75,7 +75,9 @@ return [
             'prefix' => '',
             'prefix_indexes' => true,
             'schema' => 'public',
-            'sslmode' => 'prefer',
+            'sslmode' => 'disable',
+            'socketFactory' => 'com.google.cloud.sql.postgres.SocketFactory',
+            'cloudSqlInstance' => 'tst-cirsolar-cloud:asia-east1:tst-cirsolar-db',
         ],
 
         'sqlsrv' => [

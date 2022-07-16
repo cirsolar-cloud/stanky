@@ -15,6 +15,6 @@ RUN cd /app && \
 
 RUN chown -R www-data: /app
 
-FROM gcr.io/cloudsql-docker/gce-proxy:1.31.0
+#FROM gcr.io/cloudsql-docker/gce-proxy:1.31.0
 
 CMD sh /app/docker/startup.sh
