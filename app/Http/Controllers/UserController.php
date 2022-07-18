@@ -1,9 +1,13 @@
 <?php
  
 namespace App\Http\Controllers;
+
+# When installed via composer
+require_once 'vendor/autoload.php';
  
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
+
  
 class UserController extends Controller
 {
@@ -18,5 +22,21 @@ class UserController extends Controller
 
  
         return $users; 
+    }
+
+
+    /**
+     * 
+     * Faker
+     * 
+     * 
+     */
+    public function faker()
+    {
+        // use the factory to create a Faker\Generator instance
+        $faker = Faker\Factory::create();
+
+ 
+        return   $faker->text;
     }
 }

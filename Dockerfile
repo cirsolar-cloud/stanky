@@ -2,9 +2,16 @@ FROM php:7.4-fpm-alpine
 
 RUN apk add --no-cache nginx wget postgresql-dev
 
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
 RUN docker-php-ext-install pdo_pgsql pgsql
 
 RUN mkdir -p /run/nginx
+
+## FOR TEST PACKAGE
+RUN composer require fzaninotto/faker
+
+RUN composer install
 
 
 
