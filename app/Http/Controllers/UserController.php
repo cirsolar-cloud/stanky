@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 # When installed via composer
-require_once 'vendor/autoload.php';
+#  require_once 'vendor/autoload.php';
  
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
