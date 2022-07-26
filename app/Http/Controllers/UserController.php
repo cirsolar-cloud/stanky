@@ -25,6 +25,17 @@ class UserController extends Controller
         syslog(LOG_ERR, "LOG_ERR 4"); 
 
 
+
+        error_log("error_log 000", 0);
+        error_log("error_log 111", 1);
+        error_log("error_log 333", 3);
+
+
+        echo "hello world via echo";
+
+        print "hello world via print";
+
+
         $users = DB::select('select * from HRS001MST01 limit 3');
 
  
