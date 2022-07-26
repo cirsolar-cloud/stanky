@@ -26,9 +26,9 @@ class UserController extends Controller
 
 
 
-        error_log("error_log 000", 0);
-        error_log("error_log 111", 1);
-        error_log("error_log 333", 3);
+        // error_log("error_log 000", 0);
+        // error_log("error_log 111", 1);
+        // error_log("error_log 333", 3);
 
 
         echo "hello world via echo";
