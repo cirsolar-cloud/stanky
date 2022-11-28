@@ -18,7 +18,7 @@ class UserController extends Controller
      */
     public function index()
     { 
-
+        /** aaaa */
         $users = DB::select('select * from HRS001MST01 limit 3');
 
  
